@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Samples/Mixed Reality Toolkit Foundation/2.8.3/Scene System Resources/DefaultManagerScene.unity
     guid: ae7bb08d297fb69408695d8de0962524
   - enabled: 1
+    path: Assets/Scenes/WaitingAuth.unity
+    guid: a6e7cc735c324584e9b6589463548687
+  - enabled: 1
     path: Assets/Samples/Mixed Reality Toolkit Foundation/2.8.3/Scene System Resources/DefaultLightingScene.unity
     guid: 7e54e36c44f826c438c95da79f8de638
+  - enabled: 1
+    path: Assets/Samples/Mixed Reality Toolkit Foundation/2.8.3/Scene System Resources/DefaultLightingScene.unity
+    guid: 7e54e36c44f826c438c95da79f8de638
+  - enabled: 1
+    path: Assets/Scenes/WaitingAuth.unity
+    guid: a6e7cc735c324584e9b6589463548687
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 11b79a0cc94d82b4e91f1620e0730aa6, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 40b0806ba26294246bc3e860344afce1, type: 2}
