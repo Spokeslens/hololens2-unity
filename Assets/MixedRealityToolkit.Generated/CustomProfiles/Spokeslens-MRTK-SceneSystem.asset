@@ -27,16 +27,40 @@ MonoBehaviour:
   - Name: DefaultLightingScene
     Path: Assets/Samples/Mixed Reality Toolkit Foundation/2.8.3/Scene System Resources/DefaultLightingScene.unity
     Included: 1
-    BuildIndex: 3
+    BuildIndex: 12
     Tag: Untagged
     Asset: {fileID: 102900000, guid: 7e54e36c44f826c438c95da79f8de638, type: 3}
   contentScenes:
   - Name: WaitingAuth
     Path: Assets/Scenes/WaitingAuth.unity
     Included: 1
-    BuildIndex: 4
-    Tag: Player
+    BuildIndex: 3
+    Tag: GameController
     Asset: {fileID: 102900000, guid: a6e7cc735c324584e9b6589463548687, type: 3}
+  - Name: Auth
+    Path: Assets/Scenes/Auth.unity
+    Included: 1
+    BuildIndex: 5
+    Tag: GameController
+    Asset: {fileID: 102900000, guid: 64137e0c9db66dd4791878b608c823eb, type: 3}
+  - Name: HandMenu
+    Path: Assets/Scenes/HandMenu.unity
+    Included: 1
+    BuildIndex: 7
+    Tag: Player
+    Asset: {fileID: 102900000, guid: 134254b0246e7bd4995a52564904153e, type: 3}
+  - Name: ObjectRecognition
+    Path: Assets/Scenes/ObjectRecognition.unity
+    Included: 1
+    BuildIndex: 9
+    Tag: Player
+    Asset: {fileID: 102900000, guid: 8088950ae6c7cd1489efafb876d741ca, type: 3}
+  - Name: SentenceComposition
+    Path: Assets/Scenes/SentenceComposition.unity
+    Included: 1
+    BuildIndex: 13
+    Tag: Player
+    Asset: {fileID: 102900000, guid: 5a1e8d8ce8bf79c46baae74bd1d43366, type: 3}
   permittedLightingSceneComponentTypes:
   - reference: UnityEngine.Transform, UnityEngine.CoreModule
   - reference: UnityEngine.GameObject, UnityEngine.CoreModule
@@ -45,6 +69,7 @@ MonoBehaviour:
   - reference: UnityEngine.LightProbeGroup, UnityEngine.CoreModule
   - reference: UnityEngine.LightProbeProxyVolume, UnityEngine.CoreModule
   contentTags:
+  - GameController
   - Player
   cachedLightingSettings:
   - SceneName: DefaultLightingScene

@@ -618,11 +618,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Spokeslens
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\scrat\Desktop\Coding\Spokeslens\hololens2-unity\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: Spokeslens
+  metroCertificateIssuer: Spokeslens
+  metroCertificateNotAfter: 00c9a9c7973dda01
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: hololens2-unity
