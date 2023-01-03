@@ -1,7 +1,11 @@
+using Microsoft.MixedReality.Toolkit;
+using Microsoft.MixedReality.Toolkit.SceneSystem;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class AuthManager : MonoBehaviour
 {
@@ -10,10 +14,16 @@ public class AuthManager : MonoBehaviour
 
     // Current patient loaded
     public Patient currentPatient;
+    
+    // Scene manager
+    IMixedRealitySceneSystem sceneSystem;
 
     // Start is called before the first frame update
     void Start()
     {
+        sceneSystem = MixedRealityToolkit.Instance.GetService<IMixedRealitySceneSystem>();
+        sceneSystem.LoadContent("WaitingAuth", LoadSceneMode.Single);
+
         StartCoroutine(GetAccount());
     }
 
@@ -35,10 +45,11 @@ public class AuthManager : MonoBehaviour
         {
             // String -> JSON conversion
             currentPatient = JsonUtility.FromJson<Patient>(www.downloadHandler.text);
+            sceneSystem.LoadContent("HandMenu", LoadSceneMode.Single);
         }
         else // Unassociated device
         {
-            // TODO - Pop up
+            sceneSystem.LoadContent("Auth", LoadSceneMode.Single);
         }
     }
 }
