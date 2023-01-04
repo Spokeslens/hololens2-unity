@@ -618,7 +618,7 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Spokeslens
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: C:\Users\scrat\Desktop\Coding\Spokeslens\hololens2-unity\Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: Spokeslens
   metroCertificateIssuer: Spokeslens

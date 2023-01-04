@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class AuthManager : MonoBehaviour
 {
-    // Load config
+    [SerializeField] ConfigManager configManager;
     Config config;
 
     // Current patient loaded
@@ -21,19 +21,23 @@ public class AuthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        config = configManager.config;
+        Debug.Log(config.API_URL);
         sceneSystem = MixedRealityToolkit.Instance.GetService<IMixedRealitySceneSystem>();
         sceneSystem.LoadContent("WaitingAuth", LoadSceneMode.Single);
+        return;
 
         StartCoroutine(GetAccount());
     }
 
     IEnumerator GetAccount()
     {
+
         // Device UUID of Hololens
         var deviceId = SystemInfo.deviceUniqueIdentifier;
 
         // Spawn HTTP request object
-        UnityWebRequest www = UnityWebRequest.Get(config.API_URL + "/patient");
+        var www = UnityWebRequest.Get(config.API_URL + "/patient");
 
         // Include UUID on request
         www.SetRequestHeader("device", deviceId);
