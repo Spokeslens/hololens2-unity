@@ -17,8 +17,8 @@ MonoBehaviour:
   managerScene:
     Name: DefaultManagerScene
     Path: Assets/Samples/Mixed Reality Toolkit Foundation/2.8.3/Scene System Resources/DefaultManagerScene.unity
-    Included: 1
-    BuildIndex: 0
+    Included: 0
+    BuildIndex: -1
     Tag: Untagged
     Asset: {fileID: 102900000, guid: ae7bb08d297fb69408695d8de0962524, type: 3}
   useLightingScene: 1
@@ -33,32 +33,32 @@ MonoBehaviour:
   contentScenes:
   - Name: WaitingAuth
     Path: Assets/Scenes/WaitingAuth.unity
-    Included: 1
-    BuildIndex: 14
+    Included: 0
+    BuildIndex: -1
     Tag: GameController
     Asset: {fileID: 102900000, guid: a6e7cc735c324584e9b6589463548687, type: 3}
   - Name: Auth
     Path: Assets/Scenes/Auth.unity
-    Included: 1
-    BuildIndex: 5
+    Included: 0
+    BuildIndex: -1
     Tag: GameController
     Asset: {fileID: 102900000, guid: 64137e0c9db66dd4791878b608c823eb, type: 3}
   - Name: HandMenu
     Path: Assets/Scenes/HandMenu.unity
-    Included: 1
-    BuildIndex: 7
+    Included: 0
+    BuildIndex: -1
     Tag: Player
     Asset: {fileID: 102900000, guid: 134254b0246e7bd4995a52564904153e, type: 3}
   - Name: ObjectRecognition
     Path: Assets/Scenes/ObjectRecognition.unity
-    Included: 1
-    BuildIndex: 9
+    Included: 0
+    BuildIndex: -1
     Tag: Player
     Asset: {fileID: 102900000, guid: 8088950ae6c7cd1489efafb876d741ca, type: 3}
   - Name: SentenceComposition
     Path: Assets/Scenes/SentenceComposition.unity
-    Included: 1
-    BuildIndex: 12
+    Included: 0
+    BuildIndex: -1
     Tag: Player
     Asset: {fileID: 102900000, guid: 5a1e8d8ce8bf79c46baae74bd1d43366, type: 3}
   permittedLightingSceneComponentTypes:
@@ -112,4 +112,4 @@ MonoBehaviour:
   editorEnforceSceneOrder: 1
   editorManageLoadedScenes: 1
   editorEnforceLightingSceneTypes: 1
-  editorLightingCacheOutOfDate: 0
+  editorLightingCacheOutOfDate: 1
