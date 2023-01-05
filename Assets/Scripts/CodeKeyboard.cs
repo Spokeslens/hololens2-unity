@@ -1,7 +1,9 @@
 using Microsoft.MixedReality.Toolkit;
 using Microsoft.MixedReality.Toolkit.SceneSystem;
+using Microsoft.MixedReality.Toolkit.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -33,7 +35,7 @@ public class CodeKeyboard : MonoBehaviour
 
     void Update()
     {
-        if(keyboard != null)
+        if (keyboard != null)
         {
             // Get text from keyboard
             var code = keyboard.text;
@@ -55,7 +57,13 @@ public class CodeKeyboard : MonoBehaviour
         var deviceId = SystemInfo.deviceUniqueIdentifier;
 
         // Spawn HTTP request object
-        var www = UnityWebRequest.Post(API_URL + "/patient", $"{{\"code\":\"{code}\"}}");
+        var www = new UnityWebRequest(API_URL + "/patient", "POST");
+
+        // Encode body
+        var rawBody = Encoding.UTF8.GetBytes($"{{\"code\":\"{code}\"}}");
+
+        // Embed body
+        www.uploadHandler = new UploadHandlerRaw(rawBody);
 
         // JSON request
         www.SetRequestHeader("content-type", "application/json");
@@ -65,6 +73,8 @@ public class CodeKeyboard : MonoBehaviour
 
         // Fetch
         yield return www.SendWebRequest();
+
+        Debug.Log(www.responseCode);
 
         if (www.responseCode == 200) // Patient data exists
         {
@@ -76,7 +86,6 @@ public class CodeKeyboard : MonoBehaviour
         }
         else // Unassociated device
         {
-            inputField.text = "";
             keyboard.text = "";
         }
     }
